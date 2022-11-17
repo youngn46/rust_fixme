@@ -29,6 +29,20 @@ struct Color {
     blue: u8,
 }
 
+// For Fix Option 2 below in main
+impl Display for Color {
+    // `f` is a buffer, this method must write the formatted string into it
+    fn fmt(&self, f: &mut Formatter) -> fmt::Result {
+        // `write!` is like `format!`, but it will write the formatted string into a buffer (the first argument)
+        write!(f, "red: {}, green: {}, blue: {}", self.red, self.green, self.blue)
+    }
+}
+
+/// ADV PROGRAMMING WRKSHP:RUST Fall 2022<br>
+/// Midterm Extra-Credit Project<br>
+/// Review and revise code to match given output<br>
+/// Neil Young<br>
+/// Two Options are given to correct output at lines 63 or 65
 fn main() {
     for city in [
         City { name: "Glassboro", lat: 39.702892, lon: -75.111839 },
@@ -44,6 +58,10 @@ fn main() {
         Color { red: 0, green: 0, blue: 0 },
     ].iter() {
         // Hint : Fix the code so you can print it using {}
-        println!("{:?}", *color);
+        //println!("{:?}", *color);
+        // Option 1 : Removed debug formatter from placeholder and referenced each field
+        //println!("red: {}, green: {}, blue: {}", color.red,color.green,color.blue);
+        // Option 2 : Removed debug formatter from placeholder and added implementation after struct
+        println!("{}", *color);
     }
 }
