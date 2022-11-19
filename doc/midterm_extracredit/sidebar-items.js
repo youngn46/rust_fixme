@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":[["main","ADV PROGRAMMING WRKSHP:RUST Fall 2022 Midterm Extra-Credit Project Review and revise code to match given output Neil Young Two Options are given to correct output at lines 63 or 65"]],"struct":[["City",""],["Color",""]]};
